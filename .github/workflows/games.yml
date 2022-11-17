@@ -47,4 +47,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: | 
-              ghcr.io/FriksGit/gmod_x64docker:games_source-sourcemod
+              ghcr.io/friksgit/gmod_x64docker:games_source-sourcemod
