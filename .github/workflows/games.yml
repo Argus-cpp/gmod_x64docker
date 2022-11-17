@@ -18,6 +18,7 @@ jobs:
     name: "games_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       packages: write
     strategy:
       fail-fast: false
@@ -45,7 +46,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./games
-          file: ./games/${{ matrix.tag }}/Dockerfile
+          file: ./games/source-sourcemod/Dockerfile
           platforms: linux/amd64
           push: true
           tags: | 
