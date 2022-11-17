@@ -45,6 +45,5 @@ jobs:
           context: ./games
           file: ./games/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64
+          tags: ${{ steps.meta.outputs.tags }}
           push: true
-          tags: |
-            ghcr.io/FriksGit/gmod_x64docker:games_${{ matrix.tag }}
