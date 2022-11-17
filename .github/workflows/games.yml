@@ -37,7 +37,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ GITHUB_TOKEN }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
 
       - name: Build and push image
         uses: docker/build-push-action@v3
@@ -46,5 +46,3 @@ jobs:
           file: ./games/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: |
-            ghcr.io/software-noob/pterodactyl-images:games_${{ matrix.tag }}
