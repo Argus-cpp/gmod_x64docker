@@ -1,7 +1,7 @@
 FROM        ubuntu:20.04
 
-LABEL       author="Softwarenoob" maintainer="admin@softwarenoob.com"
-LABEL       org.opencontainers.image.source="https://github.com/Software-Noob/pterodactyl-images"
+LABEL       author="Softwarenoob" maintainer="favarplay@gmail.com"
+LABEL       org.opencontainers.image.source="https://github.com/FriksGit/gmod_x64docker"
 LABEL       org.opencontainers.image.licenses="MIT"
 
 ENV         DEBIAN_FRONTEND noninteractive
