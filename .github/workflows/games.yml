@@ -32,17 +32,12 @@ jobs:
           version: "v0.8.2"
           buildkitd-flags: --debug
 
-      - name: Login to registry
+      - name: Login to registry Github
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: $GITHUB_USER
-          password: $GITHUB_TOKEN
-          ecr: auto
-          logout: true
-        env:
-            GITHUB_USER: FriksGit
-            GITHUB_TOKEN: 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
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
 
       - name: Build and push image
         uses: docker/build-push-action@v3
